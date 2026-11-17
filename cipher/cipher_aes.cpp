@@ -6,6 +6,7 @@
 #include <cryptopp/filters.h>
 #include <cryptopp/osrng.h>
 #include <cryptopp/sha.h>
+#include <cryptopp/files.h>
 #include <cryptopp/hex.h>
 
 using namespace std;
