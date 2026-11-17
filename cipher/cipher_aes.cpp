@@ -16,7 +16,7 @@ using namespace CryptoPP;
 SecByteBlock deriveKey(const string& password) {
     SecByteBlock key(AES::MAX_KEYLENGTH);
     SHA256 hash;
-    hash.CalculateDigest(key, (const byte*)password.data(), password.size());
+    hash.CalculateDigest(key, reinterpret_cast<const unsigned char*>(password.data()),password.size());
     return key;
 }
 
